@@ -60,7 +60,6 @@
                                             class="fas fa-pencil-alt"></i></a>
                                     <button onclick="sil(this, {{$b->id}})" type="button" class="btn btn-danger"><i
                                             class="fas fa-trash"></i></button>
-
                                 </td>
                             </tr>
                         @endforeach

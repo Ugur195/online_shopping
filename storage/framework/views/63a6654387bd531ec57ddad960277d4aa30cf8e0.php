@@ -193,7 +193,7 @@
                             if (response.status == 'success') {
                                 document.getElementById("datatable-editable").deleteRow(sira);
                             }
-                            swal.file({
+                            swal.fire({
                                 title: response.title,
                                 text: response.message,
                                 icon: response.status,
@@ -205,7 +205,6 @@
                 }
             })
         }
-
     </script>
 
 <?php $__env->stopSection(); ?>

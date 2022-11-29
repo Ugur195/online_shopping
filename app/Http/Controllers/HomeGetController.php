@@ -95,6 +95,17 @@ class HomeGetController extends Controller
 
     }
 
+    public function getBlogs()
+    {
+        $setting = Setting::find(1);
+        $menu = Menu::where('status', 1)->get();
+        $blogs = Blogs::all();
+        $blog_category = BlogCategory::all();
+        $about_us = AboutUs::all();
+        return view('frontend.blogs')->with(['menu' => $menu, 'setting' => $setting,
+            'blog_category' => $blog_category, 'blogs' => $blogs, 'about_us' => $about_us]);
+    }
+
     public function getSingleBlog($id)
     {
         $setting = Setting::find(1);
@@ -155,17 +166,6 @@ class HomeGetController extends Controller
         $our_team = OurTeam::all();
         return view('frontend.about_us')->with(['menu' => $menu, 'setting' => $setting, 'our_team' => $our_team, 'about_us' => $about_us]);
 
-    }
-
-    public function getBlogs()
-    {
-        $setting = Setting::find(1);
-        $menu = Menu::where('status', 1)->get();
-        $blogs = Blogs::all();
-        $blog_category = BlogCategory::all();
-               $about_us = AboutUs::all();
-        return view('frontend.blogs')->with(['menu' => $menu, 'setting' => $setting,
-            'blog_category' => $blog_category, 'blogs' => $blogs, 'about_us' => $about_us]);
     }
 
 

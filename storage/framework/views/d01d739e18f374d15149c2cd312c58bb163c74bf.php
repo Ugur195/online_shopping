@@ -30,10 +30,12 @@
                                         <div class="isotope-item document col-sm-6 col-md-4 col-lg-3">
                                             <div class="thumbnail">
                                                 <div class="thumb-preview">
-                                                        <img style="width: 300px; height: 200px" alt="" class="img-fluid"
-                                                             src="data:image/jpeg;base64,<?php echo e(base64_encode($pimg)); ?>"/>
+                                                    <img style="width: 300px; height: 200px" alt="" class="img-fluid"
+                                                         src="data:image/jpeg;base64,<?php echo e(base64_encode($pimg)); ?>"/>
 
-                                                    <button onclick="sil('<?php echo e(base64_encode($pimg)); ?>','<?php echo e($products->id); ?>')" type="button" class="btn btn-danger"><i
+                                                    <button
+                                                        onclick="sil('<?php echo e(base64_encode($pimg)); ?>','<?php echo e($products->id); ?>')"
+                                                        type="button" class="btn btn-danger"><i
                                                             class="fas fa-trash"></i></button>
                                                     <div class="mg-thumb-options">
                                                         <div class="mg-toolbar">
@@ -256,8 +258,8 @@
                                 icon: response.status,
                                 allowOutsideClick: false
                             })
-                            if(response.status=='success'){
-                                window.location.href='/admin/product_edit/<?php echo e($products->id); ?>';
+                            if (response.status == 'success') {
+                                window.location.href = '/admin/product_edit/<?php echo e($products->id); ?>';
                             }
 
                         }

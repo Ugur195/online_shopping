@@ -124,7 +124,7 @@
                         }
                     )
                     if(response.status=='success'){
-                        window.location.href='/admin/menu';
+                        window.location.href='/admin/menu_edit/{id}';
                     }
                 }
             });

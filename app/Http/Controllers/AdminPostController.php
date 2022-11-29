@@ -56,7 +56,6 @@ class AdminPostController extends Controller
 
         }
 
-
         try {
             unset($request['_token']);
             if (isset($request->logo)) {
@@ -282,6 +281,7 @@ class AdminPostController extends Controller
             } else {
                 return response(['title' => 'Ugursuz!', 'message' => 'Commenti silmek mumkun olmadi!', 'status' => 'error']);
             }
+
         } catch (\Exception $exception) {
             return response(['title' => 'Ugursuz!', 'message' => 'Reyinizi yayindirmaq olmadi', 'status' => 'error']);
         }
@@ -317,17 +317,6 @@ class AdminPostController extends Controller
     }
 
 
-    public function postMenuEdit(Request $request, $id)
-    {
-        try {
-            Menu::where('id', $request->id)->update(['name' => $request->name,
-                'page' => $request->page, 'status' => $request->status]);
-            return response(['title' => 'Ugurlu', 'message' => 'Menu update oldu!', 'status' => 'success']);
-        } catch (\Exception $exception) {
-            return response(['title' => 'Ugursuz!', 'message' => 'Menu update olmadi!', 'status' => 'error']);
-        }
-
-    }
 
 
     public function postAddBrands(Request $request)
@@ -434,6 +423,18 @@ class AdminPostController extends Controller
         } catch (\Exception $exception) {
             return response(['title' => 'Ugursuz!', 'message' => 'Menu elave olmadi!', 'status' => 'error']);
         }
+    }
+
+    public function postMenuEdit(Request $request, $id)
+    {
+        try {
+            Menu::where('id', $request->id)->update(['name' => $request->name,
+                'page' => $request->page, 'status' => $request->status]);
+            return response(['title' => 'Ugurlu', 'message' => 'Menu update oldu!', 'status' => 'success']);
+        } catch (\Exception $exception) {
+            return response(['title' => 'Ugursuz!', 'message' => 'Menu update olmadi!', 'status' => 'error']);
+        }
+
     }
 
 

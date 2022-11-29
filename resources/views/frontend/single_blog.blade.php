@@ -177,7 +177,8 @@
                                                 <textarea maxlength="5000"
                                                           data-msg-required="Please enter your message." rows="8"
                                                           class="form-control" name="comment" id="comment"
-                                                          required></textarea>
+                                                          required>
+                                                </textarea>
                                             </div>
                                         </div>
                                         <div class="form-row">

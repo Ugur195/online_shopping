@@ -58,7 +58,6 @@
                                             class="fas fa-pencil-alt"></i></a>
                                     <button onclick="sil(this, <?php echo e($b->id); ?>)" type="button" class="btn btn-danger"><i
                                             class="fas fa-trash"></i></button>
-
                                 </td>
                             </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

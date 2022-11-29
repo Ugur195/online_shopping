@@ -37,6 +37,7 @@
                         </div>
                     </div>
 
+
                     <div class="row mt-3 mb-5">
                         <div class="col-md-4 appear-animation" data-appear-animation="fadeInLeftShorter"
                              data-appear-animation-delay="800">
